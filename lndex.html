@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 사내 해외연수 안내</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- QR 코드 생성을 위한 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .card-container {
+            width: 100%;
+            max-width: 400px;
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            padding: 48px 24px 32px;
+            text-align: center;
+            color: white;
+        }
+
+        .content-section {
+            padding: 32px 24px;
+        }
+
+        .info-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 12px;
+            background: #f8fafc;
+            border-radius: 16px;
+        }
+
+        .icon-box {
+            background: #ffffff;
+            color: #2563eb;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .label {
+            font-size: 0.8rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .value {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .apply-btn {
+            background: #2563eb;
+            color: white;
+            width: 100%;
+            padding: 18px;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 1.125rem;
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            transition: all 0.2s;
+            box-shadow: 0 8px 16px rgba(37, 99, 235, 0.25);
+            margin-bottom: 24px;
+        }
+
+        .apply-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .apply-btn:active {
+            transform: translateY(0);
+        }
+
+        .qr-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px dashed #e2e8f0;
+        }
+
+        #qrcode {
+            padding: 10px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #f1f5f9;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(4px);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-bottom: 16px;
+            display: inline-block;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <!-- 상단 헤더 -->
+        <div class="hero-section">
+            <span class="badge">Global Insight 2026</span>
+            <h1 class="text-3xl font-bold mb-2">사원 해외연수 안내</h1>
+            <p class="text-blue-100 text-sm">더 넓은 세상에서 찾는 도약의 기회</p>
+        </div>
+
+        <!-- 본문 정보 -->
+        <div class="content-section">
+            <div class="info-row">
+                <div class="icon-box">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z"></path></svg>
+                </div>
+                <div>
+                    <div class="label">연수 기간</div>
+                    <div class="value">2026. 04 — 06 (선택 가능)</div>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="icon-box">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                </div>
+                <div>
+                    <div class="label">연수 일정</div>
+                    <div class="value">9박 10일 집중 연수</div>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="icon-box">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"></path></svg>
+                </div>
+                <div>
+                    <div class="label">경비 지원</div>
+                    <div class="value text-blue-600">1인당 1,000만원 전액 지원</div>
+                </div>
+            </div>
+
+            <!-- 신청 버튼 (링크 연결) -->
+            <a href="https://forms.gle/No91dgmTNAk4jS917" target="_blank" class="apply-btn">
+                신청서 바로가기
+            </a>
+
+            <!-- QR 코드 영역 -->
+            <div class="qr-section">
+                <div id="qrcode"></div>
+                <p class="text-[10px] text-gray-400 mt-3 font-medium uppercase tracking-widest">Scan to Apply</p>
+            </div>
+        </div>
+
+        <!-- 하단 푸터 -->
+        <div class="bg-gray-50 py-4 text-center">
+            <p class="text-[11px] text-gray-400">© 2026 HR Team. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // 페이지 로드 시 QR 코드 생성
+        window.onload = function() {
+            const formUrl = "https://forms.gle/No91dgmTNAk4jS917";
+            new QRCode(document.getElementById("qrcode"), {
+                text: formUrl,
+                width: 100,
+                height: 100,
+                colorDark : "#1e40af",
+                colorLight : "#ffffff",
+                correctLevel : QRCode.CorrectLevel.H
+            });
+        };
+    </script>
+</body>
+</html>
